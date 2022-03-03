@@ -16,8 +16,19 @@ public class PlayerInput : MonoBehaviour
     void Update()
     {
         if (Input.GetAxisRaw("Vertical") > 0) {
-            Debug.Log("going up");
             shipController.thrustForward();
+        }
+        else if (Input.GetAxisRaw("Vertical") < 0)
+        {
+            shipController.thrustBackward();    
+        }
+        else if (Input.GetAxisRaw("Horizontal") < 0)
+        {
+            shipController.turnLeft();
+        }
+        else if (Input.GetAxisRaw("Horizontal") > 0)
+        {
+            shipController.turnRight();
         }
     }
 }

@@ -26,18 +26,20 @@ public class ShipController : MonoBehaviour
 
     public void thrustForward()
     {
-        Debug.Log("thrust forward");
-
-        rigidBody.AddRelativeForce(Vector2.up * this.forwardThrustForce);
+        rigidBody.AddRelativeForce(Vector2.up * forwardThrustForce);
+    }
+    public void thrustBackward()
+    {
+        rigidBody.AddRelativeForce(Vector2.down * backwardThrustForce);
     }
 
     public void turnLeft()
     {
-
+        rigidBody.AddTorque(rotationThrustForce);
     }
 
     public void turnRight()
     {
-
+        rigidBody.AddTorque(-rotationThrustForce);
     }
 }
