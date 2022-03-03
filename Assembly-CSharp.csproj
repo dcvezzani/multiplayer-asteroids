@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\ShipController.cs" />
+    <Compile Include="Assets\PlayerInput.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
