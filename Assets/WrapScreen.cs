@@ -19,7 +19,7 @@ public class WrapScreen : MonoBehaviour
         ymin = viewPortDimensions.y / -1;
         ymax = viewPortDimensions.y / 1;
 
-        Debug.Log("view port dimensions: " + xmin + ", " + xmax + ", " + ymin + ", " + ymax);
+        //Debug.Log("view port dimensions: " + xmin + ", " + xmax + ", " + ymin + ", " + ymax);
 
         // cache dimensions for the sprite
         // include in update logic below
