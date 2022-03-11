@@ -8,9 +8,11 @@ public class ThrustEffect : MonoBehaviour
     public ParticleSystem [] particleSystems;
     public SpriteRenderer sr;
     public bool isShowingEffect = false;
+    private bool hasInitialized = false;
 
-    void Start()
+    private void Init()
     {
+        hasInitialized = true;
         sr = GetComponentInChildren<SpriteRenderer>(true);
         particleSystems = GetComponentsInChildren<ParticleSystem>(true);
     }
@@ -27,6 +29,10 @@ public class ThrustEffect : MonoBehaviour
 
     public void HideEffect()
     {
+        if (!hasInitialized)
+        {
+            Init();
+        }
         isShowingEffect = false;
         sr.gameObject.SetActive(false);
         for (int i = 0; i < particleSystems.Length; i++)

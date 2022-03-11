@@ -6108,8 +6108,8 @@ ParticleSystem:
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 0.9843138, b: 0.93725497, a: 0}
-        key1: {r: 0.86666673, g: 0.79215693, b: 0.54901963, a: 1}
-        key2: {r: 0.47450984, g: 0.3372549, b: 0.098039225, a: 0}
+        key1: {r: 0.8867924, g: 0.7798423, b: 0.4308473, a: 1}
+        key2: {r: 0.8207547, g: 0.5568082, b: 0.096787095, a: 0}
         key3: {r: 0.34117648, g: 0.21568629, b: 0.08235294, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
         key5: {r: 0, g: 0, b: 0, a: 0}
@@ -10473,7 +10473,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 30
+      scalar: 5
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -10912,8 +10912,8 @@ ParticleSystem:
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 0.9843138, b: 0.93725497, a: 0}
-        key1: {r: 0.86666673, g: 0.79215693, b: 0.54901963, a: 1}
-        key2: {r: 0.47450984, g: 0.3372549, b: 0.098039225, a: 0}
+        key1: {r: 0.9245283, g: 0.89486283, b: 0.7980598, a: 1}
+        key2: {r: 0.8679245, g: 0.6126902, b: 0.16785331, a: 0}
         key3: {r: 0.34117648, g: 0.21568629, b: 0.08235294, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
         key5: {r: 0, g: 0, b: 0, a: 0}
