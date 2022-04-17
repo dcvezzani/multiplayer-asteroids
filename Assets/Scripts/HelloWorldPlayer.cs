@@ -25,12 +25,33 @@ namespace HelloWorld
             }
             else
             {
-                SubmitPositionRequestServerRpc();
+                Debug.Log("I'm a client");
+                SubmitRandomPositionRequestServerRpc();
+            }
+        }
+        
+        public void MoveForward(Vector2 position)
+        {
+            if (NetworkManager.Singleton.IsServer)
+            {
+                transform.position = position;
+                Position.Value = position;
+            }
+            else
+            {
+                Debug.Log("I'm a client");
+                SubmitPositionRequestServerRpc(transform.position);
             }
         }
 
         [ServerRpc]
-        void SubmitPositionRequestServerRpc(ServerRpcParams rpcParams = default)
+        void SubmitPositionRequestServerRpc(Vector2 position, ServerRpcParams rpcParams = default)
+        {
+            Position.Value = position;
+        }
+
+        [ServerRpc]
+        void SubmitRandomPositionRequestServerRpc(ServerRpcParams rpcParams = default)
         {
             Position.Value = GetRandomPositionOnPlane();
         }
@@ -42,7 +63,7 @@ namespace HelloWorld
 
         void Update()
         {
-            // transform.position = Position.Value;
+            transform.position = Position.Value;
         }
     }
 }
